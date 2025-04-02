@@ -1,4 +1,4 @@
-class CircularLinkedList {
+export class CircularLinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
@@ -118,37 +118,29 @@ class CircularLinkedList {
   // Видалення всіх елементів за значенням
   deleteAll(element) {
     if (typeof element !== 'string' || element.length !== 1) {
-      throw new Error('Element must be a single character');
+        throw new Error('Element must be a single character');
     }
 
     if (this.head === null) return;
 
     let current = this.head;
-    let previous = this.tail;
-    let count = 0;
+    let nodesToDelete = [];
+    let index = 0;
 
+    // Сначала находим все узлы для удаления
     do {
-      if (current.data === element) {
-        if (count === 0) {
-          this.delete(0);
-          current = this.head;
-          previous = this.tail;
-          count = 0;
-          continue;
-        } else {
-          previous.next = current.next;
-          if (current === this.tail) {
-            this.tail = previous;
-          }
-          this.size--;
+        if (current.data === element) {
+            nodesToDelete.push(index);
         }
-      } else {
-        previous = current;
-        count++;
-      }
-      current = current.next;
-    } while (current !== this.head);
-  }
+        current = current.next;
+        index++;
+    } while (current !== this.head && index < this.size);
+
+    // Удаляем узлы с конца, чтобы индексы не сбивались
+    for (let i = nodesToDelete.length - 1; i >= 0; i--) {
+        this.delete(nodesToDelete[i]);
+    }
+}
 
   // Отримання елементу за позицією
   get(index) {
