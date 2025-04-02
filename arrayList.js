@@ -99,6 +99,7 @@ export class ArrayList {
   }
 }
 
+/*
 const list = new ArrayList();
 console.log(list.print());
 
@@ -142,4 +143,4 @@ list.extend(otherList);
 console.log('Після об\'єднання:', list.print()); // C > C > C > X > Y > Z > C
 
 list.clear();
-console.log('Після очищення:', list.print()); // Empty
+console.log('Після очищення:', list.print()); // Empty */
