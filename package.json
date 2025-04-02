@@ -14,9 +14,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DavidkJun/mrtpz-lab2/issues"
+    "url": "https://github.com/bndrchuk-artem/mrtpz-lab2-lists/issues"
   },
-  "homepage": "https://github.com/DavidkJun/mrtpz-lab2#readme",
+  "homepage": "https://github.com/bndrchuk-artem/mrtpz-lab2-lists#readme",
   "devDependencies": {
     "@eslint/js": "^9.23.0",
     "eslint": "^9.23.0",
