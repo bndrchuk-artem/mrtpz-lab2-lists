@@ -2,16 +2,21 @@
   "name": "mrtpz-lab2-lists",
   "version": "1.0.0",
   "description": "Lab 2",
-  "main": "index.js",
+  "main": "circularLinkedList.test.js",
   "type": "module",
   "scripts": {
-    "test": "vitest",
-    "coverage": "vitest run --coverage",
-    "lint": "eslint .",
-    "format": "prettier --write ."
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bndrchuk-artem/mrtpz-lab2-lists"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidkJun/mrtpz-lab2/issues"
+  },
+  "homepage": "https://github.com/DavidkJun/mrtpz-lab2#readme",
   "devDependencies": {
     "@eslint/js": "^9.23.0",
     "eslint": "^9.23.0",
